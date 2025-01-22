@@ -381,13 +381,13 @@ function Createnew() {
           {/*File Upload*/}
         <div className=" mx-10 my-8">
           <h2 className="text-lg font-semibold mb-2">Profile Pic</h2>
-          <div className="flex">
+          <div className="">
           <input
             type="file"
             name="image"
             accept="image/*"
             onChange={handleImageUpload}
-            className={"rounded-md p-2 border-"+col+"-400 border-"+col+"-400"}
+            className={"rounded-md p-2 pb-0 border-"+col+"-400 border-"+col+"-400"}
           />
           <div className="text-sm p-2">
             Please upload any 1x1 image for best results.
