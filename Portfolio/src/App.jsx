@@ -15,7 +15,7 @@ function Getdata() {
   useEffect(() => {
 
     //Online mode
-    fetch(id ? `http://localhost:3000/${id}` : 'http://localhost:3000/')
+    fetch(id ? `https://rzz27mlk-3000.inc1.devtunnels.ms/${id}` : 'https://rzz27mlk-3000.inc1.devtunnels.ms/')
       .then((response) => { return response.json() })
       .then((data) => { dispatch(setuser(data)); dispatch(setcolour(data.color)) })
       .catch((err) => { console.log(err) })

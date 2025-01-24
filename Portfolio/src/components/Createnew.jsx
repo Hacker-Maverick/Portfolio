@@ -118,27 +118,27 @@ function Createnew() {
     formDataToSend.append("image", formData.image);
     formDataToSend.append("formData", JSON.stringify(formData));
 
-    const res = await fetch(`http://localhost:3000/upload/${formData.basicinfo.email}`, {
+    const res = await fetch(`https://rzz27mlk-3000.inc1.devtunnels.ms/upload/${formData.basicinfo.email}`, {
       method: "POST",
       body: formDataToSend, // No Content-Type header set
     });
     const response = await res.json();
     if (res.ok) {
-      alert(`${response.message}\nYour Portfolio link is: http://localhost:3000/${response.link}`);
-      console.log(`${response.message}\nYour Portfolio link is: http://localhost:3000/${response.link}`);
+      alert(`${response.message}\nYour Portfolio link is: https://rzz27mlk-5173.inc1.devtunnels.ms/${response.link}`);
+      console.log(`${response.message}\nYour Portfolio link is: https://rzz27mlk-5173.inc1.devtunnels.ms/${response.link}`);
     } else {
       alert("Failed to submit the form");
     }
   };
 
-  return (<div className={"bg-"+col+"-200 pt-28 p-20"}>
-    <div className={"max-w-4xl mx-auto p-8 bg-" + col + "-300 shadow-2xl shadow-black rounded-3xl"}>
+  return (<div className={"bg-"+col+"-200 pt-24 sm:p-20"}>
+    <div className={"max-w-4xl mx-auto sm:p-8 p-2 pt-10 bg-" + col + "-300 shadow-2xl shadow-black rounded-3xl"}>
       <h1 className={"text-2xl font-bold text-center text-" + col + "-800 mb-6"}>User Input Form</h1>
       <form onSubmit={handleSubmit}>
         {/* Basic Info Section */}
         <div className="mx-10 my-8">
         <h2 className="text-lg font-semibold mb-2">Basic Info</h2>
-        <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-6">
+        <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-2">
           <input
             type="text"
             name="name"
@@ -215,12 +215,12 @@ function Createnew() {
           />
           {/* Color Picker Dropdown */}
           <div className="flex">
-            <h2 className="text-lg font-semibold mr-5 m-2">Theme Colour</h2>
+            <h2 className="text-lg font-semibold sm:mr-5 m-2">Theme Colour</h2>
             <select
               name="color"
               value={formData.color}
               onChange={(e) => setFormData({ ...formData, color: e.target.value })}
-              className={"border-2 rounded-md p-2 border-"+col+"-400"}
+              className={"border-2 rounded-md p-1 border-"+col+"-400"}
             >
               <option value="" className="">Select a colour</option>
               {colorOptions.map((color) => (
@@ -235,7 +235,7 @@ function Createnew() {
         <div className="mx-10 my-8">
           <h2 className="text-lg font-semibold mb-2">Designation</h2>
         {/* designation */}
-        <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-6">
+        <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-2">
           <input
             type="text"
             value={designationInput}
@@ -285,7 +285,7 @@ function Createnew() {
         {/* Skills Section */}
         <div className="mx-10 my-8">
           <h2 className="text-lg font-semibold mb-2">Skills</h2>
-          <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-6">
+          <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-2">
             <input
               type="text"
               name="domain"
@@ -324,7 +324,7 @@ function Createnew() {
         {/* Projects Section */}
         <div className="mx-10 my-8">
           <h2 className="text-lg font-semibold mb-2">Projects</h2>
-          <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-6">
+          <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-2">
             <input
               type="text"
               name="name"
@@ -342,7 +342,7 @@ function Createnew() {
               className={"border-2 rounded-md p-2 border-"+col+"-400"}
             />
           </div>
-          <div className="sm:pt-4 pt-8 flex">
+          <div className="sm:pt-4 pt-2 flex">
             <input
               type="text"
               name="desc"
@@ -352,7 +352,7 @@ function Createnew() {
               className={"border-2 rounded-md p-2 flex-grow border-"+col+"-400"}
             />
           </div>
-          <div className="sm:pt-4 pt-8 flex">
+          <div className="sm:pt-4 pt-2 flex">
             <input
               type="text"
               name="techstack"

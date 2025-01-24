@@ -38,7 +38,7 @@ function Project() {
                 {project.map((item) => {
                     return (
 
-                        <motion.div key={item._id} className={"w-80 h-96 border-2 border-black m-10 mx-auto p-5 bg-" + col + "-700 rounded-3xl"} variants={itembox} initial="initial" whileInView="animate">
+                        <motion.div key={item._id} className={"w-72 h-96 border-2 border-black m-10 mx-auto p-5 bg-" + col + "-700 rounded-3xl"} variants={itembox} initial="initial" whileInView="animate">
                             <motion.div className={"text-2xl font-bold items-center justify-center flex mb-4 border-" + col + "-800 border-b-2 h-16"} initial={{}} animate={{ textShadow: "2px 2px 2px rgb(0,0,0)" }}><div className="text-center">{item.name}</div></motion.div>
                             <div className={"h-32 scrollbar-none overflow-y-scroll"}>{item.desc}</div>
                             <div className={"h-24 my-5"}>
