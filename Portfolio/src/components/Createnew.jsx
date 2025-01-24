@@ -118,14 +118,14 @@ function Createnew() {
     formDataToSend.append("image", formData.image);
     formDataToSend.append("formData", JSON.stringify(formData));
 
-    const res = await fetch(`https://rzz27mlk-3000.inc1.devtunnels.ms/upload/${formData.basicinfo.email}`, {
+    const res = await fetch(`REPLACE_ME_WITH_SERVERS_LINK/upload/${formData.basicinfo.email}`, {
       method: "POST",
       body: formDataToSend, // No Content-Type header set
     });
     const response = await res.json();
     if (res.ok) {
-      alert(`${response.message}\nYour Portfolio link is: https://rzz27mlk-5173.inc1.devtunnels.ms/${response.link}`);
-      console.log(`${response.message}\nYour Portfolio link is: https://rzz27mlk-5173.inc1.devtunnels.ms/${response.link}`);
+      alert(`${response.message}\nYour Portfolio link is: REPLACE_ME_WITH_WEBSITE_LINK/${response.link}`);
+      console.log(`${response.message}\nYour Portfolio link is: REPLACE_ME_WITH_WEBSITE_LINK/${response.link}`);
     } else {
       alert("Failed to submit the form");
     }
