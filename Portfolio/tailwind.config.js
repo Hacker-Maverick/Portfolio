@@ -12,19 +12,19 @@ export default {
       }
     },
   },
-  // safelist:[
-  //   {
-  //     pattern: /bg-(.*)-(.*)/,
-  //   },
-  //   {
-  //     pattern: /border-(.*)-(.*)/,
-  //   },
-  //   {
-  //     pattern: /text-(.*)-(.*)/,
-  //   },
-  //   {
-  //     pattern: /(from|via|to)-(.*)-(.*)/,
-  //   }
-  // ],
+  safelist:[
+    {
+      pattern: /bg-(.*)-(.*)/,
+    },
+    {
+      pattern: /border-(.*)-(.*)/,
+    },
+    {
+      pattern: /text-(.*)-(.*)/,
+    },
+    {
+      pattern: /(from|via|to)-(.*)-(.*)/,
+    }
+  ],
   plugins: [require('tailwind-scrollbar')],
 }
