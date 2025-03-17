@@ -130,7 +130,7 @@ function Getdata() {
     "color": "amber",
     "__v": 0
   };
-  dispatch(setuser(data)); dispatch(setcolour(data.color)) }
+  dispatch(setuser(data)); }
   else { return (<><Navbar id={info.basicinfo.email}/><Home /></>) }
 }
 
