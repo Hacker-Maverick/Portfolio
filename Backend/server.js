@@ -7,7 +7,7 @@ import homeRoute from './routes/home.js';
 import createRoute from './routes/create.js'
 import imgroute from './routes/image.js'
 
-const port = 3000;
+const port = 3000 || process.env.PORT;
 const app = express();
 
 try { let db = await mongoose.connect("mongodb://localhost:27017/Portfolio") }
