@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { motion } from "motion/react";
 import Typer from "./Typer";
-import sauravphoto from "../public/saurav.jpg"
 
 function Home1() {
 
@@ -47,7 +46,7 @@ function Home1() {
             <motion.div className="sm:w-1/2 w-full h-80" variants={pic}>
                 <motion.div className={"m-auto w-60 h-60 border-x-8 border-" + col + "-300 rounded-full sm:mt-10 flex"} variants={picborder} whileHover="hover" whileTap="clc">
                     <motion.div className={"m-auto w-48 h-48 rounded-full overflow-hidden"}>
-                        <img src={/*`REPLACE_ME_WITH_SERVERS_LINK/image/${info.basicinfo.email}.jpg` */sauravphoto } className="h-48"></img>
+                        <img src={`REPLACE_ME_WITH_SERVERS_LINK/image/${info.basicinfo.email}.jpg`} className="h-48"></img>
                     </motion.div>
                 </motion.div>
             </motion.div>
